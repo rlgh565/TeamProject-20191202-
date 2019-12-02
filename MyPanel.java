@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import javax.swing.JComboBox;
+import java.awt.event.*;
 /**
  * Write a description of class MyPanel here.
  *
@@ -9,6 +10,8 @@ import javax.swing.JComboBox;
  */
 public class MyPanel extends JPanel
 {
+    private JTextField tf = new JTextField(20);
+    private JTextArea ta = new JTextArea(7,20);
     public MyPanel()
     {
         this.setLayout(new FlowLayout());
@@ -23,6 +26,17 @@ public class MyPanel extends JPanel
         this.add(jcb);
         this.add(new JButton("추가"));
         this.add(new JButton("Clear"));
+        this.add(tf);
+        this.add(new JScrollPane(ta));
+        ta.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    JTextField t = (JTextField)e.getSource();
+                    ta.append(t.getText() + "\n");
+                    t.setText("");
+                }
+            });
+        setSize(300,300);
+        setVisible(true);
     }
     
 }
