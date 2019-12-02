@@ -10,8 +10,9 @@ import java.awt.event.*;
  */
 public class MyPanel extends JPanel
 {
-    private JTextField tf = new JTextField(20);
     private JTextArea ta = new JTextArea(7,20);
+    private JButton btn1 = new JButton("추가");
+    private JButton btn2 = new JButton("Clear");
     public MyPanel()
     {
         this.setLayout(new FlowLayout());
@@ -24,11 +25,10 @@ public class MyPanel extends JPanel
         this.add(new JLabel("학년"));
         JComboBox jcb = new JComboBox(new String[] {"1학년","2학년","3학년","4학년"});
         this.add(jcb);
-        this.add(new JButton("추가"));
-        this.add(new JButton("Clear"));
-        this.add(tf);
+        this.add(btn1);
+        this.add(btn2);
         this.add(new JScrollPane(ta));
-        ta.addActionListener(new ActionListener() {
+        btn1.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
                     JTextField t = (JTextField)e.getSource();
                     ta.append(t.getText() + "\n");
