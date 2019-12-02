@@ -18,4 +18,5 @@ public class MyPanel extends JPanel
         this.add(new JLabel("주소"));
         this.add(new JTextField("서울..",20));
     }
+    
 }

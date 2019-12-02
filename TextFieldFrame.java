@@ -1,11 +1,12 @@
 import javax.swing.*;
+
 /**
  * Frame역할을 하는 TextFieledFrame.
  * 
  * @author (2018315053 테라오카유이카) 
  * @version (2019.12.02)
  */
-public class TextFieledFrame extends JFrame
+public class TextFieldFrame extends JFrame
 {
     public MyPanel mp;
     public TextFieldFrame(){
