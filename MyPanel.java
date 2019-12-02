@@ -35,6 +35,11 @@ public class MyPanel extends JPanel
                     t.setText("");
                 }
             });
+        btn2.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    
+                }
+            });    
         setSize(300,300);
         setVisible(true);
     }
