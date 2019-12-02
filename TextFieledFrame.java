@@ -12,6 +12,15 @@ public class TextFieledFrame extends JFrame
         this.setTitle("라디오 버튼 만들기");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
+        Container c = getContentPane();
+        c.setLayout(new FlowLayout());
+        
+        c.add(new JLabel("이름 "));
+        c.add(new JTextField(20));
+        c.add(new JLabel("학과 "));
+        c.add(new JTextField("글로벌소프트웨어학과", 20));
+        c.add(new JLabel("주소 "));
+        c.add(new JTextField("수원시", 20));
         
         
         mp = new MyPanel();
