@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import javax.swing.JComboBox;
 /**
  * Write a description of class MyPanel here.
  *
@@ -17,6 +18,10 @@ public class MyPanel extends JPanel
         this.add(new JTextField("글소",20));
         this.add(new JLabel("주소"));
         this.add(new JTextField("서울..",20));
+        
+        this.add(new JLabel("학년"));
+        JComboBox jcb = new JComboBox(new String[] {"1학년","2학년","3학년","4학년"});
+        
     }
     
 }
