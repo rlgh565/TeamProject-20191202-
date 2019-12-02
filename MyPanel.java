@@ -20,6 +20,7 @@ public class MyPanel extends JPanel
         this.add(new JTextField("서울..",20));
         this.add(new JLabel("학년"));
         JComboBox jcb = new JComboBox(new String[] {"1학년","2학년","3학년","4학년"});
+        this.add(jcb);
         this.add(new JButton("추가"));
         this.add(new JButton("Clear"));
     }
